@@ -53,5 +53,7 @@ prep -design picorv32a
 ```bash
 run_synthesis
 ```
+<img width="1047" height="491" alt="image" src="https://github.com/user-attachments/assets/7a278402-eb86-4acf-bd97-c053ab9c41fb" />
+
 
 The synthesis process generates the optimized gate-level netlist along with timing, utilization and area reports required for further physical design stages.
