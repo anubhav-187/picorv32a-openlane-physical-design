@@ -4,7 +4,7 @@ This project demonstrates the complete ASIC implementation flow of the PicoRV32a
 The objective of this work is to understand the RTL-to-GDSII flow and analyze different stages involved in modern ASIC physical design.
 
 
-# Section 1: Introduction to Open-Source ASIC Design Flow, OpenLANE and SKY130 PDK
+# Introduction to Open-Source ASIC Design Flow, OpenLANE and SKY130 PDK
 
 ## Objectives of this Section
 
@@ -15,7 +15,7 @@ The objective of this work is to understand the RTL-to-GDSII flow and analyze di
 
 ---
 
-## 1. RTL Synthesis of PicoRV32a using OpenLANE
+## RTL Synthesis of PicoRV32a using OpenLANE
 
 The synthesis stage converts the RTL representation of the PicoRV32a processor into a gate-level netlist using standard cells available in the SKY130 library.  
 This process was performed using the OpenLANE automated ASIC flow.
@@ -93,3 +93,6 @@ Percentage of DFFs = 10.84%
 
 
 The obtained flop ratio indicates the proportion of sequential logic elements utilized within the PicoRV32a design after synthesis.
+
+## Floorplan Optimization and Introduction to Standard Cells
+
