@@ -115,6 +115,7 @@ Once the synthesis stage was completed, the physical floorplanning stage was ini
 ```bash
 run_floorplan
 ```
+<img width="1048" height="533" alt="image" src="https://github.com/user-attachments/assets/c319ffed-6956-4de1-989c-3c5a281c8846" />
 
 The generated floorplan forms the initial physical structure of the ASIC layout and prepares the design for placement and routing stages.
 
@@ -124,12 +125,53 @@ The generated floorplan forms the initial physical structure of the ASIC layout 
 
 OpenLANE provides several configurable variables that help in controlling floorplan characteristics such as core area, utilization factor, clock settings and routing resources.
 
+<img width="1062" height="515" alt="image" src="https://github.com/user-attachments/assets/4a0ee260-a126-4b69-b83c-7e8b63080db4" />
+<img width="1051" height="527" alt="image" src="https://github.com/user-attachments/assets/4954ed1b-6952-49ee-b8eb-c0bf2f6026a9" />
 
+## Die Area Calculation
 
-These configuration settings are useful for optimizing layout quality and improving placement efficiency during physical implementation.
+Area of Die in Microns = Die Width in Microns × Die Height in Microns
 
----
+<img width="1050" height="520" alt="image" src="https://github.com/user-attachments/assets/4520095d-51f6-40b7-9255-ff5042a6fb4c" />
+## Die Area Calculation from floorplan.def
 
+According to the generated `floorplan.def` file:
+
+```text
+1000 Unit Distance = 1 Micron
+```
+
+### Die Dimensions in Unit Distance
+
+```text
+Die Width  = 660685 - 0 = 660685
+Die Height = 671405 - 0 = 671405
+```
+
+### Conversion from Unit Distance to Microns
+
+```text
+Distance in Microns = Value in Unit Distance / 1000
+```
+
+### Die Width Calculation
+
+```text
+Die Width = 660685 / 1000 = 660.685 Microns
+```
+
+### Die Height Calculation
+
+```text
+Die Height = 671405 / 1000 = 671.405 Microns
+```
+
+### Final Die Area
+
+```text
+Area of Die = 660.685 × 671.405
+             = 443587.212 Square Microns
+```
 ## Floorplan Exploration using Magic Tool
 
 The generated DEF file was loaded into the Magic VLSI tool to inspect the floorplan structure and analyze the arrangement of standard cell rows and routing resources.
