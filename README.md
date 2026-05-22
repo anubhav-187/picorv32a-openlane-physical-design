@@ -309,9 +309,7 @@ ext2spice
 
 These commands generate the extracted SPICE netlist from the layout by including parasitic capacitances and resistances required for accurate circuit simulation.
 ```bash
-
-<img width="1042" height="369" alt="image" src="https://github.com/user-attachments/assets/9c8839a6-a3b2-46e6-b8ad-fb3aa7239f82" />
-
-
 magic -T sky130A.tech sky130_inv.mag &
 ```
+<img width="1045" height="629" alt="image" src="https://github.com/user-attachments/assets/cb4c2dfe-bbc8-4bf3-a8de-33ad76110174" />
+
