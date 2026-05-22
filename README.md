@@ -258,6 +258,7 @@ cd Desktop/work/tools/openlane_working_dir/openlane
 ```bash
 git clone https://github.com/nickson-jose/vsdstdcelldesign
 ```
+<img width="1048" height="631" alt="image" src="https://github.com/user-attachments/assets/87f43447-83b6-4316-a381-ab931f7902fc" />
 
 ### Move into the Cloned Directory
 
@@ -268,8 +269,9 @@ cd vsdstdcelldesign
 ### Copy SKY130 Magic Technology File
 
 ```bash
-cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+cd /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
 ```
+<img width="1045" height="629" alt="image" src="https://github.com/user-attachments/assets/1cd4bb1e-0345-4fbb-a0cc-939dfb42543d" />
 
 ### Verify Repository Contents
 
@@ -283,8 +285,33 @@ The required layout files, SPICE files and Magic technology files were verified 
 
 ## Opening the Custom Inverter Layout in Magic
 
+<img width="1046" height="630" alt="image" src="https://github.com/user-attachments/assets/e86ee510-9e27-4a43-9244-c1f59cdad7ad" />
+<img width="1050" height="629" alt="image" src="https://github.com/user-attachments/assets/f9a6dfe6-b4dd-46c2-9d37-da6578d58205" />
+<img width="1042" height="635" alt="image" src="https://github.com/user-attachments/assets/63bffa5d-53c6-4d42-bd55-a02c129579c0" />
+
+
 The inverter layout was loaded into the Magic VLSI editor for physical inspection and transistor-level layout analysis.
 
+
+## SPICE Netlist Extraction from Standard Cell Layout
+
+To perform post-layout characterization of the CMOS inverter using ngspice, the SPICE netlist was extracted from the Magic layout using the following extraction commands.
+
+### Commands Used for SPICE Extraction
+
 ```bash
+extract all
+
+ext2spice cthresh 0 rthresh 0
+
+ext2spice
+```
+
+These commands generate the extracted SPICE netlist from the layout by including parasitic capacitances and resistances required for accurate circuit simulation.
+```bash
+
+<img width="1042" height="369" alt="image" src="https://github.com/user-attachments/assets/9c8839a6-a3b2-46e6-b8ad-fb3aa7239f82" />
+
+
 magic -T sky130A.tech sky130_inv.mag &
 ```
