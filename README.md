@@ -204,8 +204,32 @@ After successful floorplanning, the placement stage was executed to position sta
 ```bash
 run_placement
 ```
+<img width="1048" height="505" alt="image" src="https://github.com/user-attachments/assets/fce7899e-947d-40e4-8ca2-aab2cfbfdfeb" />
+<img width="1055" height="525" alt="image" src="https://github.com/user-attachments/assets/e5f455de-a673-4d20-bab8-fcee84579ca8" />
 
 The placement process arranges the synthesized cells in an optimized manner to improve timing performance and routing efficiency for subsequent physical design stages.
+
+## Placement Visualization using Magic Tool
+
+The generated placement DEF file was loaded into the Magic VLSI layout editor to analyze the arrangement of standard cells after placement optimization.
+
+### Navigate to Placement Result Directory
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-10_13-39/results/placement
+```
+
+### Command to Open Placement DEF in Magic
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech placement.def &
+```
+
+The placement layout shows the distribution of standard cells within the core region after congestion-aware placement performed by OpenLANE.
+
+<img width="1047" height="501" alt="image" src="https://github.com/user-attachments/assets/1ada8d72-d95f-4e42-962c-d35a5753efcb" />
+<img width="1050" height="515" alt="image" src="https://github.com/user-attachments/assets/daf0a0aa-3c98-4ed3-8009-2946c9804b00" />
+
 
 
 
