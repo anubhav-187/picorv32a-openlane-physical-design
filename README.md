@@ -231,5 +231,60 @@ The placement layout shows the distribution of standard cells within the core re
 <img width="1050" height="515" alt="image" src="https://github.com/user-attachments/assets/daf0a0aa-3c98-4ed3-8009-2946c9804b00" />
 
 
+# Section 3: Custom Standard Cell Design and ngspice Characterization using Magic
 
+## Objectives of this Section
 
+1. Import the custom inverter standard cell design from a GitHub repository.
+2. Perform SPICE extraction for the designed inverter cell.
+3. Create and analyze CMOS inverter layout using Magic VLSI.
+4. Modify SPICE model parameters for simulation analysis.
+5. Execute post-layout simulations using ngspice.
+
+---
+
+## 1. Importing Custom Inverter Cell Design
+
+A custom CMOS inverter layout design repository was cloned for performing layout design and characterization using Magic and ngspice tools.
+
+### Navigate to OpenLANE Directory
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane
+```
+
+### Clone the Inverter Design Repository
+
+```bash
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+```
+
+### Move into the Cloned Directory
+
+```bash
+cd vsdstdcelldesign
+```
+
+### Copy SKY130 Magic Technology File
+
+```bash
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+```
+
+### Verify Repository Contents
+
+```bash
+ls
+```
+
+The required layout files, SPICE files and Magic technology files were verified before starting layout exploration and characterization.
+
+---
+
+## Opening the Custom Inverter Layout in Magic
+
+The inverter layout was loaded into the Magic VLSI editor for physical inspection and transistor-level layout analysis.
+
+```bash
+magic -T sky130A.tech sky130_inv.mag &
+```
