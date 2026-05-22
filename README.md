@@ -190,3 +190,22 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 The Magic tool allows visualization of the generated floorplan, routing resources and placement rows created during the floorplanning stage.
 
+<img width="1051" height="507" alt="image" src="https://github.com/user-attachments/assets/8ba33371-da14-4f6e-8a42-2e276f901899" />
+<img width="1047" height="508" alt="image" src="https://github.com/user-attachments/assets/f0454461-afd4-46bf-9169-eff5a8443623" />
+<img width="1046" height="505" alt="image" src="https://github.com/user-attachments/assets/2283a590-a330-4c75-b3ba-6b7e0032a7e9" />
+<img width="1046" height="506" alt="image" src="https://github.com/user-attachments/assets/f6123c4a-6409-428f-b3be-518cece16b20" />
+
+## Congestion-Aware Placement using OpenLANE
+
+After successful floorplanning, the placement stage was executed to position standard cells inside the core area while minimizing routing congestion and wirelength.
+
+### Placement Command
+
+```bash
+run_placement
+```
+
+The placement process arranges the synthesized cells in an optimized manner to improve timing performance and routing efficiency for subsequent physical design stages.
+
+
+
