@@ -172,9 +172,10 @@ Die Height = 671405 / 1000 = 671.405 Microns
 Area of Die = 660.685 × 671.405
              = 443587.212 Square Microns
 ```
-## Floorplan Exploration using Magic Tool
+# Change directory to path containing generated floorplan.def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-10_12-26/results/floorplan/
 
-The generated DEF file was loaded into the Magic VLSI tool to inspect the floorplan structure and analyze the arrangement of standard cell rows and routing resources.
-
+# Command to load the floorplan def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 
 
