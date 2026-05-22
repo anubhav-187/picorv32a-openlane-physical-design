@@ -172,10 +172,21 @@ Die Height = 671405 / 1000 = 671.405 Microns
 Area of Die = 660.685 × 671.405
              = 443587.212 Square Microns
 ```
-# Change directory to path containing generated floorplan.def
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-10_12-26/results/floorplan/
+## Loading the Generated Floorplan in Magic Tool
 
-# Command to load the floorplan def in magic tool
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+The generated floorplan DEF file was imported into the Magic VLSI layout tool to inspect the physical layout structure and standard cell arrangement.
 
+### Navigate to the Floorplan Directory
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-10_12-26/results/floorplan
+```
+
+### Command to Open Floorplan in Magic
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech floorplan.def &
+```
+
+The Magic tool allows visualization of the generated floorplan, routing resources and placement rows created during the floorplanning stage.
 
