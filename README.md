@@ -54,6 +54,8 @@ prep -design picorv32a
 run_synthesis
 ```
 <img width="1047" height="491" alt="image" src="https://github.com/user-attachments/assets/7a278402-eb86-4acf-bd97-c053ab9c41fb" />
+<img width="1060" height="407" alt="image" src="https://github.com/user-attachments/assets/10a277d7-ec5d-478f-ae1a-b7457d72b25f" />
+<img width="1047" height="557" alt="image" src="https://github.com/user-attachments/assets/e6873e8a-39df-4530-b111-a0743bd4a228" />
 
 
 The synthesis process generates the optimized gate-level netlist along with timing, utilization and area reports required for further physical design stages.
