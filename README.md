@@ -312,4 +312,31 @@ These commands generate the extracted SPICE netlist from the layout by including
 magic -T sky130A.tech sky130_inv.mag &
 ```
 <img width="1045" height="629" alt="image" src="https://github.com/user-attachments/assets/cb4c2dfe-bbc8-4bf3-a8de-33ad76110174" />
+<img width="1045" height="632" alt="image" src="https://github.com/user-attachments/assets/a4fd51db-85e2-466e-a448-80c64386a025" />
+<img width="1052" height="373" alt="image" src="https://github.com/user-attachments/assets/437eac72-60b0-46b2-9b85-a18b24943b34" />
+<img width="1051" height="633" alt="image" src="https://github.com/user-attachments/assets/494eb6cb-e56b-42b0-9752-4e0459c9393c" />
+
+
+## Post-Layout Characterization of Inverter using SKY130 Model Files
+
+After extracting the SPICE netlist from the inverter layout, ngspice simulation was performed using SKY130 model files to analyze the transient behavior of the CMOS inverter.
+
+### Running ngspice Simulation
+
+```bash
+ngspice sky130_inv.spice
+```
+
+### Plotting Voltage versus Time Waveform
+
+```bash
+plot y vs time a
+```
+
+The generated waveform shows the switching characteristics of the inverter where the output transitions opposite to the input signal, confirming proper inverter functionality.
+
+<img width="1047" height="635" alt="image" src="https://github.com/user-attachments/assets/41c0b491-29b9-41d6-8b34-5717a37e5519" />
+
+Increase the C3 value from 0.024ff to 2ff to decrease the ripples in the graphs.
+<img width="1042" height="625" alt="image" src="https://github.com/user-attachments/assets/6e023e3f-5c25-45d6-a0d4-b7c6f879e62d" />
 
