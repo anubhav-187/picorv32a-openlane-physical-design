@@ -60,7 +60,8 @@ run_synthesis
 After completing the synthesis stage, a gate-level netlist for the PicoRV32a processor was successfully generated using the Yosys synthesis tool.  
 The generated netlist contains technology-mapped standard cells from the SKY130 library, which are used for further physical design stages.
 
-![Gate Level Netlist](images/netlist.png)
+<img width="1050" height="518" alt="image" src="https://github.com/user-attachments/assets/ce65ccbe-ca61-4923-9c83-4b12e48caf9f" />
+
 
 ---
 
